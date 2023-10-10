@@ -2,29 +2,66 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace _11Drawing
+namespace _11Е
 {
     public partial class Form1 : Form
     {
-
         public Form1()
         {
             InitializeComponent();
         }
-        protected override void OnPaint(PaintEventArgs e)
+
+        
+        protected override void OnPaint( PaintEventArgs e)
         {
+            int z = 400;
             Graphics g = e.Graphics;
-            g.Clear(Color.FromArgb(20, 50, 30));
-            Pen p = new Pen(Color.White, 5);
-            g.DrawLine(p, 15, 15, 15, 80);
-            Pen k = new Pen(Color.White, 2);
-            Point a = new Point(123, 24);
-            Point b = new Point(12, 242);
-            g.DrawLine(k,a,b);
-            Pen r = new Pen(Color.Blue, 5);
-            g.DrawRectangle(r,10,10,500,200);
+            g.Clear(Color.Gray);
+            Pen p = new Pen(Color.White, 8);
+            g.DrawLine(p, z, 10, z+100, 10);
+            Pen k = new Pen(Color.Green, 8);
+            g.DrawLine(k, z, 18, z+100, 18);
+            Pen l = new Pen(Color.Red, 8);
+            g.DrawLine(l, z, 26, z + 100, 26);
+
+            Pen b = new Pen(Color.Black, 2);
+
+            for (int i = 50; i <= 90; i += 10) {
+                
+                g.DrawLine(b, z, i, z + 100, i);
+                }
+            int x = 160, y=170;
+           // for (int h = 0; h <= 150; h += 25)
+           // {
+                g.DrawLine(b, x - 150, y, x, y);
+                g.DrawLine(b, x - 125, y - 75, x, y);
+                g.DrawLine(b, x - 75, y - 125, x, y);
+                g.DrawLine(b, x + 125, y - 75, x, y);
+                g.DrawLine(b, x + 75, y - 125, x, y);
+                g.DrawLine(b, x, y - 150, x, y);
+                g.DrawLine(b, x, y + 150, x, y);
+                g.DrawLine(b, x + 150, y, x, y);
+                g.DrawLine(b, x + 125, y + 75, x, y);
+                g.DrawLine(b, x + 75, y + 125, x, y);
+                g.DrawLine(b, x - 125, y + 75, x, y);
+                g.DrawLine(b, x - 75, y + 125, x, y);
+         Pen bbr = new Pen(Color.Gray, 2);
+            g.DrawLine(bbr, x - 110, y, x, y);
+            g.DrawLine(bbr, x - 100, y - 60, x, y);
+            g.DrawLine(bbr, x - 60, y - 100, x, y);
+            g.DrawLine(bbr, x + 100, y - 60, x, y);
+            g.DrawLine(bbr, x + 60, y - 100, x, y);
+            g.DrawLine(bbr, x, y - 110, x, y);
+            g.DrawLine(bbr, x, y + 110, x, y);
+            g.DrawLine(bbr, x + 110, y, x, y);
+            g.DrawLine(bbr, x + 100, y + 60, x, y);
+            g.DrawLine(bbr, x + 60, y + 100, x, y);
+            g.DrawLine(bbr, x - 100, y + 60, x, y);
+            g.DrawLine(bbr, x - 60, y + 100, x, y);
+          
+
+
+
         }
     }
-    
 }
-
